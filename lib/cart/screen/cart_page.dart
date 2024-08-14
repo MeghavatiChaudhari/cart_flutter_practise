@@ -16,9 +16,9 @@ class CartPage extends StatelessWidget {
             children: [
               Expanded(
                   child: ListView.builder(
-                      itemCount: cartController.cartItems.length,
+                      itemCount: cartController.product.cartItems.length,
                       itemBuilder: (context, index) {
-                        final product = cartController.cartItems[index];
+                        final product = cartController.product.cartItems[index];
                         return ListTile(
                           title: Text(product.name),
                           subtitle: Text('\$${product.price}'),
